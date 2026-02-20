@@ -101,15 +101,18 @@ section {
   stroke: var(--colorText);
 }
 
-.primaryHeader .columnLeft h2 {
+.primaryHeader .columnLeft a {
   font-size: 4rem;
   font-weight: var(--fontWeightBold);
+  color: var(--colorText);
+  text-decoration: none;
 }
 
 .primaryHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
 }
 
 .btnOpenMenuMobile,
@@ -495,6 +498,15 @@ section {
 @media (min-width: 769px) {
   /*
 *
+* ABOUT PAGE
+*
+*/
+
+  .expList .secondList {
+    border-bottom: 2px solid var(--colorBorder);
+  }
+  /*
+*
 * MENU MOBILE
 *
 */
@@ -721,15 +733,20 @@ expSecondLine */
   margin: 0;
 }
 
+.expList .secondList .expListItem {
+  border-bottom: none;
+}
+
 .about-page .expList .expListItem {
   padding-bottom: 20px;
-  border-bottom: 2px solid var(--colorBorder);
+  margin-bottom: 30px;
 }
 
 .about-page .expList .expFirstLine {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .about-page .expList .expFirstLine h3 {
@@ -780,12 +797,13 @@ expSecondLine */
 
 .contact-page .sectionContact h1 {
   margin-bottom: 0;
+  font-size: clamp(2.8rem, 5vw, 5.8rem);
 }
 
 .contact-page .sectionContact .contentEmail {
   background: var(--primaryGradient);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 5.8rem;
+  font-size: clamp(2.8rem, 5vw, 5.8rem);
   font-weight: var(--fontWeightBold);
 }
